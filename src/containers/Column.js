@@ -8,7 +8,7 @@ import DeleteIcon from 'material-ui/svg-icons/action/delete'
 import { push } from "react-router-redux";
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import './Column.css'
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+
 
 const styles = {
   headerStyle: {
