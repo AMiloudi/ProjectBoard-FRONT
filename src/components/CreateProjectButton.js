@@ -13,6 +13,14 @@ const styles = {
   }
 };
 
+const paperStyle = {
+  height: 300,
+  width: 300,
+  margin: 20,
+  textAlign: 'center',
+  display: 'inline-block',
+};
+
 class CreateProjectButton extends PureComponent {
   static propTypes = {
     signedIn: PropTypes.bool,
@@ -33,7 +41,7 @@ class CreateProjectButton extends PureComponent {
     if (!this.props.signedIn) return null
 
     return (
-      <div className="Form">
+      <div style={paperStyle} className="Form" zDepth={4}>
         <h2>Add Project</h2>
         <form ref="form">
           <div className="input">

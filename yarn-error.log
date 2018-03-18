@@ -1,5 +1,5 @@
 Arguments: 
-  /home/anissa/.nvm/versions/node/v8.5.0/bin/node /usr/share/yarn/bin/yarn.js install
+  /home/anissa/.nvm/versions/node/v8.5.0/bin/node /usr/share/yarn/bin/yarn.js add react-dragula --save
 
 PATH: 
   /home/anissa/.nvm/versions/node/v8.5.0/bin:/home/anissa/.rbenv/shims:/home/anissa/.rbenv/plugins/ruby-build/bin:/home/anissa/.rbenv/shims:/home/anissa/.rbenv/bin:/home/anissa/bin:/home/anissa/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin

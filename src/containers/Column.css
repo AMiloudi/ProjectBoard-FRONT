@@ -1,0 +1,7 @@
+.container{
+  width: 12.5%;
+  height: 1200px;
+  border-right: 2px solid lightGrey;
+  float: left;
+
+}

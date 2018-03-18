@@ -5,8 +5,10 @@
   "dependencies": {
     "history": "^4.7.2",
     "material-ui": "^0.19.4",
+    "moment": "^2.20.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
+    "react-dragula": "^1.1.17",
     "react-fontawesome": "^1.6.1",
     "react-redux": "^5.0.6",
     "react-redux-form": "^1.16.5",
@@ -16,8 +18,7 @@
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
     "socket.io-client": "^2.0.4",
-    "superagent": "^3.8.2",
-    "moment": "^2.20.1"
+    "superagent": "^3.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
