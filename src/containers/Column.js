@@ -1,33 +1,10 @@
 import React, { PureComponent } from "react";
 import ReactDOM from 'react-dom'
 import { connect } from "react-redux";
-import IconButton from 'material-ui/IconButton'
 import {fetchProjects} from "../actions/projects/fetch";
 import deleteProject from "../actions/projects/delete";
-import DeleteIcon from 'material-ui/svg-icons/action/delete'
 import { push } from "react-router-redux";
-import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import './Column.css'
-
-
-const styles = {
-  headerStyle: {
-    backgroundColor: '#40bf80',
-    borderTopLeftRadius: '1.5rem',
-    textAlign: 'left',
-    borderTopRightRadius:'1.5rem'
-  },
-  headerTextStyle:{
-    textAlign: 'center',
-  },
-  cardStyle: {
-    borderRadius: '1.5rem',
-    overFlow: 'hidden',
-    width: '12rem',
-    height: '13rem',
-    margin: '1rem',
-  }
-};
 
 
 class Column extends PureComponent {
@@ -46,29 +23,28 @@ class Column extends PureComponent {
       const title = project.title
       const text = project.text
 
+      if(project.status[0].name !== this.props.laneName) {
+        return
+      }
+
       return (
-        <Card style={styles.cardStyle} key={index}>
-            <CardHeader
-            style={styles.headerStyle}
-            titleStyle={styles.headerTextStyle}
-            title={title}
-            />
-            <CardText>{text}</CardText>
-            <CardActions>
-              <IconButton onClick={this.deleteThisProject(project._id)}>
-                <DeleteIcon/>
-              </IconButton>
-            </CardActions>
-        </Card>
+        <div data-projectid={project._id} className="col-md-12 card">
+          <div className="cardHeader">
+            {title} <i className="fas fa-times" onClick={this.deleteThisProject(project._id)}></i>
+          </div>
+          <div className="cardBody">
+            {text}
+          </div>
+        </div>
       )
     }
 
   render(project, index){
       const {projects} = this.props
     return (
-       <div className='container' >
+       <div className="col-md-2 lane" data-name={this.props.laneName} key={index}>
            {projects.map(this.renderProject)}
-        </div>
+      </div>
 
     )
   }

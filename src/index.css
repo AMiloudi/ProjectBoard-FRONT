@@ -1,10 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Bellefair");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed'");
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Bellefair', serif;
+  font-family: 'Roboto Condensed', sans-serif;
   background-color: #f6f6f6;
+  color: Grey;
 }
 
 .Form{

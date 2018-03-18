@@ -1,7 +1,33 @@
-.container{
-  width: 12.5%;
-  height: 1200px;
-  border-right: 2px solid lightGrey;
-  float: left;
+.laneContainer:first-child {
+  border-left: 1px solid #ccc;
+}
 
+.lane{
+  min-height: 800px;
+  border-right: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+.card{
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.cardHeader{
+  background-color: #339966;
+  padding: 0.3rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  color: white;
+}
+
+.cardHeader i {
+  float: right;
+}
+
+.cardBody {
+  padding: 0.3rem;
 }

@@ -6,6 +6,8 @@ import {
   LOAD_SUCCESS
 } from '../loading'
 
+import {PROJECT_CREATED} from './subscribe'
+
 const api = new API()
 
 export default (newProject) => {
@@ -13,9 +15,11 @@ export default (newProject) => {
     dispatch({ type: APP_LOADING })
 
   api.post('/projects', newProject)
-      .then(() => {
+      .then((result) => {
         dispatch({ type: APP_DONE_LOADING })
         dispatch({ type: LOAD_SUCCESS })
+
+        dispatch({type: PROJECT_CREATED, payload: result.body})
       })
       .catch((error) => {
         dispatch({ type: APP_DONE_LOADING })

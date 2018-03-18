@@ -9,11 +9,11 @@ import { PROJECT_UPDATED } from './subscribe'
 
 const api = new API()
 
-export default (projectId, status) => {
+export default (id, name) => {
   return (dispatch) => {
     dispatch({ type: APP_LOADING })
 
-    api.patch(`/projects/${projectId}/status`, status)
+    api.patch(`/projects/${id}/changestatus`, {name:name})
       .then((result) => {
         dispatch({ type: APP_DONE_LOADING })
         dispatch({ type: LOAD_SUCCESS })

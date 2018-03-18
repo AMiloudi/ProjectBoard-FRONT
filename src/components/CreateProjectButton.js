@@ -3,28 +3,11 @@ import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import TextField from 'material-ui/TextField'
-import FlatButton from 'material-ui/FlatButton'
+import RaisedButton from 'material-ui/RaisedButton';
 import createProject from '../actions/projects/create'
-import {grey500} from 'material-ui/styles/colors';
-
-const styles = {
-  hintText: {
-    color:grey500
-  }
-};
-
-const paperStyle = {
-  height: 300,
-  width: 300,
-  margin: 20,
-  textAlign: 'center',
-  display: 'inline-block',
-};
+import './CreateProjectButton.css'
 
 class CreateProjectButton extends PureComponent {
-  static propTypes = {
-    signedIn: PropTypes.bool,
-  }
 
   submitProject(event) {
     event.preventDefault()
@@ -38,36 +21,29 @@ class CreateProjectButton extends PureComponent {
 
 
   render() {
-    if (!this.props.signedIn) return null
-
     return (
-      <div style={paperStyle} className="Form" zDepth={4}>
-        <h2>Add Project</h2>
+      <div className="createProject" >
+        <div className="ProjectBox">Add Project</div>
         <form ref="form">
           <div className="input">
-            <TextField ref= "title" type="title" hintText= "Project Title"
-            style={styles.hintText}
-            />
+            <TextField ref= "title" type="title"/>
           </div>
-          <h3>text</h3>
+          <div className="ProjectBox-second">text</div>
           <div className="input">
-            <TextField
-            ref="text"
-            type="text"
-            />
+            <TextField ref="text" type="text" />
           </div>
-            <FlatButton
+          <div className="CreateButton">
+            <RaisedButton
             onClick={ this.submitProject.bind(this) }
+            secondary={true}
             label="Create new project"
             />
+          </div>
         </form>
       </div>
     )
   }
 }
 
-const mapStateToProps = ({ currentUser }) => ({
-  signedIn: !!currentUser && !!currentUser._id,
-})
 
-export default connect(mapStateToProps, { createProject })(CreateProjectButton)
+export default connect(null, { createProject })(CreateProjectButton)

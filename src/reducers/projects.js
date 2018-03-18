@@ -10,24 +10,12 @@ export default (state = [], { type, payload } = {}) => {
     case FETCHED_PROJECTS :
       return [...payload]
 
-    case FETCHED_ONE_PROJECT :
-      const projectIds = state.map(g => g._id)
-      if (projectIds.indexOf(payload._id) < 0) {
-        return [{ ...payload }].concat(state)
-      }
-      return state.map((project) => {
-        if (project._id === payload._id) {
-          return { ...payload }
-        }
-        return project
-      })
-
     case PROJECT_CREATED :
       const newProject = { ...payload }
       return [newProject].concat(state)
 
     case PROJECT_UPDATED :
-      return state.map((project) => {
+      return state.projects.map((project) => {
         if (project._id === payload._id) {
           return { ...payload }
         }

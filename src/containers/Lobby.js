@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import ProjectBoard from '../containers/ProjectBoard'
+import CreateProjectButton from '../components/CreateProjectButton'
 import './Lobby.css'
 
 class Lobby extends PureComponent {
@@ -8,6 +9,7 @@ class Lobby extends PureComponent {
     return (
       <div className="Board">
         <ProjectBoard/>
+        <CreateProjectButton/>
       </div>
     )
   }

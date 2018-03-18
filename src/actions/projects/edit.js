@@ -1,3 +1,0 @@
-
-
-export const BATCH_UPDATED = 'BATCH_UPDATED'

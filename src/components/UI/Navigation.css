@@ -1,0 +1,18 @@
+.menu {
+  background-color: white;
+  width: 100%;
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.75);
+}
+
+.menuItem {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 1.5rem;
+}
+
+.iconMenu{
+  float: right;
+  margin-top: -1.5rem;
+}

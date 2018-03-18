@@ -1,0 +1,28 @@
+.createProject{
+  position: fixed;
+  bottom: -4px;
+  left: 10px;
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.ProjectBox{
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 20px;
+}
+
+.ProjectBox-second{
+
+  padding-left: 1.5rem;
+  font-size: 15px;
+}
+
+.CreateButton{
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.input{
+    padding-left: 1.5rem;
+}
